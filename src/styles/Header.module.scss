@@ -1,0 +1,21 @@
+.box__header {
+  display: flex;
+  justify-content: flex-start;
+  position: fixed;
+  background-color: white;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5vh;
+  z-index: 2;
+}
+
+.logo {
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.header__right {
+  display: flex;
+  // padding-right: 1vw;
+}

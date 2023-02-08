@@ -1,0 +1,74 @@
+@import "./mixin";
+.main {
+  margin-top: 5vh;
+}
+
+.main > div > h1 {
+  font-size: 60px;
+  text-align: left;
+}
+
+.box__profile {
+  display: flex;
+  position: relative;
+  background-color: black;
+  height: 95vh;
+  width: 100%;
+}
+
+.box__img {
+  object-fit: cover;
+  width: 100%;
+  opacity: 0.5;
+}
+
+.text__intro {
+  position: absolute;
+  z-index: 1;
+  font-size: 25px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
+.animate__bounce {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  top: 90%;
+  animation: bounce 0.4s ease infinite alternate;
+}
+
+.box__work {
+}
+
+.box__skill {
+}
+
+.box__project {
+}
+
+.box__contact {
+}
+
+@keyframes bounce {
+  0% {
+    top: 90%;
+  }
+  100% {
+    top: 95%;
+  }
+}
+
+@include mobile {
+  .profile__box {
+    display: block;
+  }
+}
+
+@include tablet {
+  .profile__box {
+    display: block;
+  }
+}
