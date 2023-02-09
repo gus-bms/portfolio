@@ -3,9 +3,24 @@
   margin-top: 5vh;
 }
 
+.main > div > h1,
+h2,
+h3,
+p {
+  margin-left: 20px;
+  text-align: left;
+}
+
 .main > div > h1 {
   font-size: 60px;
   text-align: left;
+}
+
+.main > div > h1::before {
+  content: "\f0c1";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  margin-right: 10px;
 }
 
 .box__profile {
@@ -41,8 +56,29 @@
 }
 
 .box__work {
+  text-align: left;
 }
 
+.box__work > div {
+  display: flex;
+}
+
+.resume__period {
+  margin-left: 10px;
+}
+
+.resume__rank {
+}
+
+.resume__result {
+}
+.resume__result::before {
+  content: "\f303";
+  color: burlywood;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  margin-right: 10px;
+}
 .box__skill {
 }
 
