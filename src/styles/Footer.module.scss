@@ -1,0 +1,21 @@
+.box__footer {
+  height: 17vh;
+  align-items: center;
+  justify-content: center;
+  display: grid;
+  background-color: #434450;
+}
+
+.brand__logo {
+  margin: 15px;
+  cursor: pointer;
+  transition: 0.3s;
+  &:hover {
+    color: #c4ced6;
+  }
+}
+
+.copyright {
+  color: #b3b19f;
+  margin: 0;
+}

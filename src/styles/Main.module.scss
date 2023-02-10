@@ -1,33 +1,13 @@
 @import "./mixin";
 .main {
-  margin-top: 5vh;
-}
-
-.main > div > h1,
-h2,
-h3,
-p {
-  margin-left: 20px;
-  text-align: left;
-}
-
-.main > div > h1 {
-  font-size: 60px;
-  text-align: left;
-}
-
-.main > div > h1::before {
-  content: "\f0c1";
-  font-family: "Font Awesome 5 Free";
-  font-weight: 900;
-  margin-right: 10px;
+  margin-top: 10vh;
 }
 
 .box__profile {
   display: flex;
   position: relative;
   background-color: black;
-  height: 95vh;
+  height: 90vh;
   width: 100%;
 }
 
@@ -45,6 +25,7 @@ p {
   left: 50%;
   transform: translate(-50%, -50%);
   color: white;
+  text-align: left;
 }
 
 .animate__bounce {
@@ -55,23 +36,46 @@ p {
   animation: bounce 0.4s ease infinite alternate;
 }
 
-.box__work {
+/* 공통 영역 */
+article {
+  margin-left: 20vh;
+  margin-right: 20vh;
   text-align: left;
+  margin-bottom: 10vh;
 }
 
-.box__work > div {
+article > h1 {
+  font-size: 55px;
+  margin: 3vh 0 3vh;
+  border-bottom: rgb(216, 147, 112) solid;
+  line-height: 11vh;
+  min-height: 90px;
+}
+
+article > h1::before {
+  content: "\f0c1";
+  color: rgb(216, 147, 112);
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  margin-right: 10px;
+}
+
+article > div > div {
   display: flex;
 }
 
-.resume__period {
-  margin-left: 10px;
+article > div > div > h2 {
+  font-size: 30px;
+  font-weight: 600;
+  margin-right: 10px;
 }
 
-.resume__rank {
-}
-
+/* 경력 영역 */
 .resume__result {
+  font-size: 25px;
+  font-weight: 500;
 }
+
 .resume__result::before {
   content: "\f303";
   color: burlywood;
@@ -79,15 +83,31 @@ p {
   font-weight: 900;
   margin-right: 10px;
 }
-.box__skill {
+
+/* 프로젝트 영역 */
+.box__project > div > h2 {
+  font-size: 30px;
 }
 
-.box__project {
+.project__intro::before {
+  content: "\f303";
+  color: burlywood;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  margin-right: 10px;
 }
 
-.box__contact {
+.box__project > div > p {
+  font-size: x-large;
+  font-weight: 500;
+  line-height: 32px;
 }
 
+.box__contact > h2 {
+  display: flex;
+  align-items: center;
+}
+/* 애니메이션 영역 */
 @keyframes bounce {
   0% {
     top: 90%;
@@ -101,10 +121,20 @@ p {
   .profile__box {
     display: block;
   }
+  /* 공통 영역 */
+  article {
+    margin-left: 5vh;
+    margin-right: 5vh;
+  }
 }
 
 @include tablet {
   .profile__box {
     display: block;
+  }
+
+  article {
+    margin-left: 5vh;
+    margin-right: 5vh;
   }
 }
