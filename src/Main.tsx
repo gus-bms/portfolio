@@ -1,8 +1,7 @@
 import style from './styles/Main.module.scss'
 import { faAngleDown } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { useEffect } from 'react';
-
+import TypeButton from './component/TypeButton';
 export default function Main() {
 
   return (
@@ -41,7 +40,8 @@ export default function Main() {
           <div>
             <h2 className={style.project__title}>Find Photo.</h2>
             <h2 className={style.project__period}>2023.01 ~ 2023.02 </h2>
-            <h2> 개인 프로젝트</h2>
+            <TypeButton name='개인' type='P' />
+            <TypeButton name='Link' type='L' url='https://github.com/gus-bms/find_photo/' />
           </div>
           {/* <h2 className={style.project__url}>https://find-photo.vercel.app</h2> */}
           <p className={style.project__intro}>여행을 다니며 사진을 남기고 추억을 공유하기를 좋아했습니다. 이 추억을 친구들에게 이야기하며 나누는 것을 좋아하는 저의 취미를 서비스로 만들어보고자 했습니다.</p>
@@ -56,6 +56,8 @@ export default function Main() {
         <div>
           <div>
             <h2 className={style.project__title}>글루닥</h2>
+            <TypeButton name='회사' type='C' />
+            <TypeButton name='Link' type='L' url='http://gludoc.com/' />
           </div>
           <p className={style.project__intro}>만성질환을 겪고 있는 환자분들의 기록을 쉽게 기록할 수 있게 도움을 주는 서비스입니다. </p>
           <p className={style.project__intro}>카메라로 혈당계, 혈압계, 체중계, 체온계 등의 기록을 쉽게 할 수 있으며, 채팅 서비스를 통해 의료진의 코칭을 받을 수 있습니다. </p>
@@ -71,6 +73,8 @@ export default function Main() {
         <div>
           <div>
             <h2 className={style.project__title}>iLAB Solution</h2>
+            <TypeButton name='회사' type='C' />
+            <TypeButton name='Link' type='L' url='https://www.bioconnect.co.kr/lims' />
           </div>
           <p className={style.project__intro}>실험실에서 실험기기를 통해 발생하는 레포트를 서버에 전송시켜 통합적 관리를 할 수 있는 시스템을 개발하였습니다.</p>
           <p className={style.project__intro}>실험실에서 관리하는 전반적인 기기, 시약 등을 관리하고 실험 데이터와 프로세스를 전산화하여 성적서를 발행하는 시스템을 개발하였습니다.</p>

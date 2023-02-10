@@ -42,46 +42,45 @@ article {
   margin-right: 20vh;
   text-align: left;
   margin-bottom: 10vh;
-}
 
-article > h1 {
-  font-size: 55px;
-  margin: 3vh 0 3vh;
-  border-bottom: rgb(216, 147, 112) solid;
-  line-height: 11vh;
-  min-height: 90px;
-}
+  h1 {
+    font-size: 55px;
+    margin: 3vh 0 3vh;
+    border-bottom: rgb(216, 147, 112) solid;
+    line-height: 11vh;
+    min-height: 90px;
+  }
+  h1::before {
+    content: "\f0c1";
+    color: rgb(216, 147, 112);
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    margin-right: 10px;
+  }
+  div > div {
+    display: flex;
+    align-items: center;
+  }
 
-article > h1::before {
-  content: "\f0c1";
-  color: rgb(216, 147, 112);
-  font-family: "Font Awesome 5 Free";
-  font-weight: 900;
-  margin-right: 10px;
-}
-
-article > div > div {
-  display: flex;
-}
-
-article > div > div > h2 {
-  font-size: 30px;
-  font-weight: 600;
-  margin-right: 10px;
+  div > div > h2 {
+    font-size: 30px;
+    font-weight: 600;
+    margin-right: 10px;
+  }
 }
 
 /* 경력 영역 */
 .resume__result {
   font-size: 25px;
   font-weight: 500;
-}
 
-.resume__result::before {
-  content: "\f303";
-  color: burlywood;
-  font-family: "Font Awesome 5 Free";
-  font-weight: 900;
-  margin-right: 10px;
+  &:before {
+    content: "\f303";
+    color: burlywood;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    margin-right: 10px;
+  }
 }
 
 /* 프로젝트 영역 */
