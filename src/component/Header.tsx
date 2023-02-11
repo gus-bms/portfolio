@@ -33,7 +33,7 @@ export default function Header() {
       <div className={style.box__header}>
         <h1 onClick={handleLogo} className={style.logo}>Gus-Bms</h1>
         <div className={style.box__menu} style={{ marginLeft: 'auto', display: 'flex' }}>
-          <h2 onClick={() => moveAnchor('career')}>career</h2>
+          <h2 onClick={() => moveAnchor('history')}>history</h2>
           <h2 onClick={() => moveAnchor('projects')} >projects</h2>
           <h2 >certi</h2>
         </div>

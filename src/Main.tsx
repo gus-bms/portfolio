@@ -1,7 +1,8 @@
 import style from './styles/Main.module.scss'
-import { faAngleDown } from "@fortawesome/free-solid-svg-icons";
+import { faAngleDown, faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import TypeButton from './component/TypeButton';
+import TimeLine from './component/TimeLine';
 export default function Main() {
 
   return (
@@ -15,11 +16,19 @@ export default function Main() {
           <h2>새로운 도전을 두려워하지 않으며 기회로 받아들이는 타입입니다.</h2>
           <h2>배움을 기록하기 위한 습관을 기르고 있습니다.</h2>
         </div>
+        <div className={style.text__contact}>
+          <FontAwesomeIcon icon={faEnvelope} size='2x' color='white' /><h2>gusbms0627@gmail.com</h2>
+        </div>
         <FontAwesomeIcon icon={faAngleDown} size='2x' color='white' className={style.animate__bounce} />
       </div>
       {/* 경력 영역 */}
-      <article id='career' className={style.box__work}>
-        <h1>Dev Career.</h1>
+      <article id='history1' className={style.box__work}>
+        <h1>History.</h1>
+        <TimeLine />
+      </article>
+
+      <article id='history' className={style.box__work}>
+        <h1>History.</h1>
         <div>
           <div>
             <h2 className={style.resume__company}>(주)바이오커넥트</h2>

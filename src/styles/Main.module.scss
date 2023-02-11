@@ -28,6 +28,23 @@
   text-align: left;
 }
 
+.text__contact {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  z-index: 1;
+  font-size: 25px;
+  top: 90%;
+  left: 15px;
+  // transform: translate(-50%, -50%);
+  color: white;
+  text-align: left;
+
+  h2 {
+    margin-left: 15px;
+  }
+}
+
 .animate__bounce {
   position: absolute;
   bottom: 0;
@@ -55,7 +72,7 @@ article {
     color: rgb(216, 147, 112);
     font-family: "Font Awesome 5 Free";
     font-weight: 900;
-    margin-right: 10px;
+    margin-right: 20px;
   }
   div > div {
     display: flex;
@@ -97,7 +114,7 @@ article {
 }
 
 .box__project > div > p {
-  font-size: x-large;
+  font-size: 18px;
   font-weight: 500;
   line-height: 32px;
 }
