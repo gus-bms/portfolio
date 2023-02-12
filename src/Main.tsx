@@ -17,17 +17,18 @@ export default function Main() {
           <h2>배움을 기록하기 위한 습관을 기르고 있습니다.</h2>
         </div>
         <div className={style.text__contact}>
-          <FontAwesomeIcon icon={faEnvelope} size='2x' color='white' /><h2>gusbms0627@gmail.com</h2>
+          <FontAwesomeIcon icon={faEnvelope} size='2x' color='white' />
+          <h2>gusbms0627@gmail.com</h2>
         </div>
         <FontAwesomeIcon icon={faAngleDown} size='2x' color='white' className={style.animate__bounce} />
       </div>
       {/* 경력 영역 */}
-      <article id='history1' className={style.box__work}>
+      <article id='history' className={style.box__work}>
         <h1>History.</h1>
         <TimeLine />
       </article>
 
-      <article id='history' className={style.box__work}>
+      {/* <article id='history' className={style.box__work}>
         <h1>History.</h1>
         <div>
           <div>
@@ -41,7 +42,7 @@ export default function Main() {
           <p className={style.resume__result}>프로젝트 종료 후 보완점 캐치 후 고도화 진행</p>
           <p className={style.resume__result}>프로젝트/특정 서비스 이용 가이드 문서 작성</p>
         </div>
-      </article>
+      </article> */}
       {/* 프로젝트 영역 */}
       <article id='projects' className={style.box__project}>
         <h1>Projects.</h1>
