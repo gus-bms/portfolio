@@ -4,6 +4,7 @@ import { faAngleDown, faEnvelope, faAnglesUp } from "@fortawesome/free-solid-svg
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import TypeButton from './component/TypeButton';
 import TimeLine from './component/TimeLine';
+import profile from './assets/profile.jpg'
 
 export default function Main() {
   const topRef = useRef<HTMLButtonElement | null>(null)
@@ -34,7 +35,7 @@ export default function Main() {
     <div className={style.main}>
       {/* profile 영역 */}
       <div className={style.box__profile}>
-        <img className={style.box__img} src={'/assets/profile.jpg'} alt={''}>
+        <img className={style.box__img} src={`${process.env.PUBLIC_URL}/assets/profile.jpg`} alt={''}>
         </img>
         <div className={style.text__intro}>
           <h2>안녕하세요, 주니어 웹 개발자 박규범입니다.</h2>
