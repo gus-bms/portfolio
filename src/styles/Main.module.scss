@@ -1,13 +1,13 @@
 @import "./mixin";
 .main {
-  margin-top: 10vh;
+  margin-top: 7vh;
 }
 
 .box__profile {
   display: flex;
   position: relative;
   background-color: black;
-  height: 90vh;
+  height: 93vh;
   width: 100%;
 }
 
@@ -121,6 +121,30 @@ article {
 .box__contact > h2 {
   display: flex;
   align-items: center;
+}
+
+.btn__top {
+  position: fixed;
+  cursor: pointer;
+  right: 20px;
+  bottom: 50px;
+  border-radius: 17px;
+  display: grid;
+  justify-items: center;
+  height: 80px;
+  font-size: 20px;
+  width: 80px;
+  transition: all 0.3s;
+  visibility: hidden;
+  background: linear-gradient(180deg, #b3b19f, #d89370);
+  opacity: 0;
+  svg {
+    margin-top: 10px;
+  }
+
+  span {
+    margin-bottom: 3px;
+  }
 }
 /* 애니메이션 영역 */
 @keyframes bounce {

@@ -1,13 +1,10 @@
 import { useRef } from "react";
 import style from "../styles/TimeLine.module.scss";
 export default function TimeLine() {
-  const pRef = useRef<HTMLParagraphElement[] | null[]>([]);
+  const pRef = useRef<HTMLParagraphElement[] | null[]>([])
 
   const handlePClick = (idx: number) => {
-    if (pRef.current != null) {
-      pRef.current[idx]?.focus()
-    }
-
+    pRef.current[idx]?.focus()
   };
 
   return (
@@ -16,7 +13,7 @@ export default function TimeLine() {
         <div className={style.nav__track} data-draggable>
           <ul className={style.nav__list}>
             <li>
-              <p
+              <div
                 tabIndex={0}
                 onClick={() => handlePClick(0)}
                 ref={(el) => (pRef.current[0] = el)}
@@ -29,10 +26,10 @@ export default function TimeLine() {
                   <p className={style.nav__detail}>ABAP 언어 복수 전공</p>
                   <p className={style.nav__detail}>4.24 / 4.5 졸업</p>
                 </div>
-              </p>
+              </div>
             </li>
             <li>
-              <p
+              <div
                 tabIndex={0}
                 onClick={() => handlePClick(1)}
                 ref={(el) => (pRef.current[1] = el)}
@@ -45,10 +42,10 @@ export default function TimeLine() {
                   <p className={style.nav__detail}>ABAP 항공권 예매 프로그램 과제</p>
                   <p className={style.nav__detail}>인턴쉽 합격</p>
                 </div>
-              </p>
+              </div>
             </li>
             <li>
-              <p
+              <div
                 tabIndex={0}
                 onClick={() => handlePClick(2)}
                 ref={(el) => (pRef.current[2] = el)}
@@ -62,10 +59,10 @@ export default function TimeLine() {
                   <p className={style.nav__detail}>MES 시스템 테스트 수행</p>
                   <p className={style.nav__detail}>AG 시스템 테스트 수행</p>
                 </div>
-              </p>
+              </div>
             </li>
             <li>
-              <p
+              <div
                 tabIndex={0}
                 onClick={() => handlePClick(3)}
                 ref={(el) => (pRef.current[3] = el)}
@@ -80,10 +77,10 @@ export default function TimeLine() {
                   <p className={style.nav__detail}>프로젝트 종료 후 보완점 캐치 후 고도화 진행</p>
                   <p className={style.nav__detail}>프로젝트/특정 서비스 이용 가이드 문서 작성</p>
                 </div>
-              </p>
+              </div>
             </li>
             <li>
-              <p
+              <div
                 tabIndex={0}
                 onClick={() => handlePClick(4)}
                 ref={(el) => (pRef.current[4] = el)}
@@ -97,11 +94,11 @@ export default function TimeLine() {
                   <p className={style.nav__detail}>HTML / CSS Study</p>
                   <p className={style.nav__detail}>정보처리기사 취득</p>
                 </div>
-              </p>
-            </li>
-          </ul>
-        </div>
-      </nav>
+              </div>
+            </li >
+          </ul >
+        </div >
+      </nav >
     </>
   );
 }

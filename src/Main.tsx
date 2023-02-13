@@ -1,9 +1,34 @@
+import { useEffect, useRef } from 'react';
 import style from './styles/Main.module.scss'
-import { faAngleDown, faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import { faAngleDown, faEnvelope, faAnglesUp } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import TypeButton from './component/TypeButton';
 import TimeLine from './component/TimeLine';
+
 export default function Main() {
+  const topRef = useRef<HTMLButtonElement | null>(null)
+
+  useEffect(() => {
+    window.onscroll = function () {
+      var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+      var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      if (topRef.current) {
+        // eslint-disable-next-line @typescript-eslint/no-unused-expressions
+        winScroll < 600
+          ? (
+            topRef.current.style.visibility = 'hidden',
+            topRef.current.style.opacity = '0',
+            topRef.current.style.bottom = '-50px'
+          )
+          : (
+            topRef.current.style.visibility = 'visible',
+            topRef.current.style.opacity = '1',
+            topRef.current.style.bottom = '50px'
+          )
+      }
+
+    }
+  }, [])
 
   return (
     <div className={style.main}>
@@ -27,22 +52,6 @@ export default function Main() {
         <h1>History.</h1>
         <TimeLine />
       </article>
-
-      {/* <article id='history' className={style.box__work}>
-        <h1>History.</h1>
-        <div>
-          <div>
-            <h2 className={style.resume__company}>(주)바이오커넥트</h2>
-            <h2 className={style.resume__period}>2020.08 ~ 2022.07</h2>
-            <h2 className={style.resume__rank}>R&D Center | 주임</h2>
-          </div>
-
-          <p className={style.resume__result}>실험실 관리 솔루션과 헬스케어 서비스 개발</p>
-          <p className={style.resume__result}>2건의 프로젝트 납품 및 서비스 출시 경험</p>
-          <p className={style.resume__result}>프로젝트 종료 후 보완점 캐치 후 고도화 진행</p>
-          <p className={style.resume__result}>프로젝트/특정 서비스 이용 가이드 문서 작성</p>
-        </div>
-      </article> */}
       {/* 프로젝트 영역 */}
       <article id='projects' className={style.box__project}>
         <h1>Projects.</h1>
@@ -95,6 +104,10 @@ export default function Main() {
           <p className={style.project__intro}> 프로젝트 납품 클라이언트와 소통하여 필요한 기능들을 추가 개발하였습니다. </p>
         </div>
       </article>
+      <button ref={topRef} className={style.btn__top} onClick={() => window.scrollTo({ behavior: 'smooth', top: 0 })}>
+        <FontAwesomeIcon icon={faAnglesUp} size='2x' color='black' />
+        <span>Top</span>
+      </button>
       {/*       
       <div className={style.box_skill}>
         <h1>Skills.</h1>
