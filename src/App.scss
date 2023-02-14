@@ -1,3 +1,18 @@
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background-color: #f7c76829;
+}
+::-webkit-scrollbar-thumb {
+  background-color: burlywood;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-button:start:decrement,
+::-webkit-scrollbar-button:end:increment {
+  width: 5px;
+}
+
 body {
   -webkit-user-select: none;
   -moz-user-select: none;

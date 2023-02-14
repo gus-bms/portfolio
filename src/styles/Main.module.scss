@@ -20,9 +20,9 @@
 .text__intro {
   position: absolute;
   z-index: 1;
-  font-size: 25px;
+  font-size: 1.5vw;
+  left: 37%;
   top: 50%;
-  left: 50%;
   transform: translate(-50%, -50%);
   color: white;
   text-align: left;
@@ -65,57 +65,92 @@ article {
     border-bottom: rgb(216, 147, 112) solid;
     line-height: 11vh;
     min-height: 90px;
+    &::before {
+      content: "\f0c1";
+      color: rgb(216, 147, 112);
+      font-family: "Font Awesome 5 Free";
+      font-weight: 900;
+      margin-right: 20px;
+    }
   }
-  h1::before {
-    content: "\f0c1";
-    color: rgb(216, 147, 112);
-    font-family: "Font Awesome 5 Free";
-    font-weight: 900;
-    margin-right: 20px;
-  }
+
   div > div {
     display: flex;
     align-items: center;
-  }
-
-  div > div > h2 {
-    font-size: 30px;
-    font-weight: 600;
-    margin-right: 10px;
-  }
-}
-
-/* 경력 영역 */
-.resume__result {
-  font-size: 25px;
-  font-weight: 500;
-
-  &:before {
-    content: "\f303";
-    color: burlywood;
-    font-family: "Font Awesome 5 Free";
-    font-weight: 900;
-    margin-right: 10px;
+    > h2 {
+      font-size: 30px;
+      font-weight: 600;
+      margin-right: 10px;
+    }
   }
 }
 
 /* 프로젝트 영역 */
-.box__project > div > h2 {
-  font-size: 30px;
-}
+.box__project {
+  > div {
+    border-radius: 15px;
+    background-color: #f4f4f4;
+    padding: 30px 0 10px 30px;
+    margin-bottom: 30px;
+  }
 
-.project__intro::before {
-  content: "\f303";
-  color: burlywood;
-  font-family: "Font Awesome 5 Free";
-  font-weight: 900;
-  margin-right: 10px;
-}
+  > div > div {
+    justify-content: center;
 
-.box__project > div > p {
-  font-size: 18px;
-  font-weight: 500;
-  line-height: 32px;
+    h2 {
+      font-size: 27px;
+    }
+  }
+
+  .box__slider {
+    max-width: 40%;
+    margin: 0px 30px 0px 30px;
+  }
+
+  .box__intro {
+    display: block;
+    width: 100%;
+
+    .intro {
+      padding: 10px 20px 10px 20px;
+      display: block;
+      width: 100%;
+      p {
+        padding-left: 1.5em;
+        text-indent: -1.5em;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 32px;
+
+        &::before {
+          content: "\f068";
+          color: burlywood;
+          font-family: "Font Awesome 5 Free";
+          font-weight: 900;
+          margin-right: 10px;
+        }
+      }
+    }
+
+    .skill {
+      padding: 10px 20px 10px 20px;
+      display: block;
+      width: 100%;
+      p {
+        font-size: 15px;
+        font-weight: 500;
+        line-height: 32px;
+
+        &::before {
+          content: "\f121";
+          color: burlywood;
+          font-family: "Font Awesome 5 Free";
+          font-weight: 700;
+          margin-right: 10px;
+        }
+      }
+    }
+  }
 }
 
 .box__contact > h2 {
@@ -146,6 +181,7 @@ article {
     margin-bottom: 3px;
   }
 }
+
 /* 애니메이션 영역 */
 @keyframes bounce {
   0% {
