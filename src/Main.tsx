@@ -8,6 +8,7 @@ import Slider from './component/Slider';
 
 export default function Main() {
   const topRef = useRef<HTMLButtonElement | null>(null)
+  const findPhotoImgs = ['find_photo1', 'find_photo2', 'find_photo3', 'find_photo4']
 
   useEffect(() => {
     window.onscroll = function () {
@@ -64,7 +65,7 @@ export default function Main() {
           </div>
           <div className={style.project__detail}>
             <div className={style.box__slider}>
-              <Slider />
+              <Slider images={findPhotoImgs} />
             </div>
             <div className={style.box__intro}>
               <div className={style.intro}>
@@ -97,7 +98,7 @@ export default function Main() {
           </div>
           <div className={style.project__detail}>
             <div className={style.box__slider}>
-              <Slider />
+              <Slider images={findPhotoImgs} />
             </div>
             <div className={style.box__intro}>
               <div className={style.intro}>
@@ -153,7 +154,7 @@ export default function Main() {
           </div>
           <div className={style.project__detail}>
             <div className={style.box__slider}>
-              <Slider />
+              <Slider images={findPhotoImgs} />
             </div>
             <div className={style.box__intro}>
               <div className={style.intro}>
@@ -206,7 +207,7 @@ export default function Main() {
           </div>
           <div className={style.project__detail}>
             <div className={style.box__slider}>
-              <Slider />
+              <Slider images={findPhotoImgs} />
             </div>
             <div className={style.box__intro}>
               <div className={style.intro}>
@@ -256,7 +257,7 @@ export default function Main() {
           </div>
           <div className={style.project__detail}>
             <div className={style.box__slider}>
-              <Slider />
+              <Slider images={findPhotoImgs} />
             </div>
             <div className={style.box__intro}>
               <div className={style.intro}>

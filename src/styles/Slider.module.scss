@@ -1,13 +1,42 @@
 .container {
   display: block;
   margin-bottom: 80px;
+  position: relative;
+
+  .button__right {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    cursor: pointer;
+  }
+  .button__left {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    cursor: pointer;
+  }
 }
 .box__slider {
   width: 300px;
   height: 350px;
   background-color: black;
+  overflow: hidden;
+
+  img {
+    object-fit: cover;
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+  }
 }
 
+#left {
+  color: white;
+}
+#right {
+  color: white;
+  right: 1000px;
+}
 .box__locate {
   margin-top: 25px;
   justify-content: center;
