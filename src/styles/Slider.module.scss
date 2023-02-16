@@ -17,15 +17,19 @@
   }
 }
 .box__slider {
+  transition: all 0.3s;
   width: 300px;
   height: 350px;
-  background-color: black;
+  background-color: rgba(86, 86, 86, 0.706);
   overflow: hidden;
+  scroll-behavior: auto;
 
   img {
     object-fit: cover;
     width: 100%;
     height: auto;
+    min-width: 100%;
+    max-height: 250px;
     cursor: pointer;
   }
 }

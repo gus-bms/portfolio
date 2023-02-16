@@ -9,6 +9,8 @@ import Slider from './component/Slider';
 export default function Main() {
   const topRef = useRef<HTMLButtonElement | null>(null)
   const findPhotoImgs = ['find_photo1', 'find_photo2', 'find_photo3', 'find_photo4']
+  const portFolioImgs = ['portfolio_1', 'portfolio_2', 'portfolio_1']
+  const gludocMobileImgs = ['gludoc_mobile_1', 'gludoc_mobile_2', 'gludoc_mobile_3', 'gludoc_mobile_4', 'gludoc_mobile_5', 'gludoc_mobile_6', 'gludoc_mobile_7']
 
   useEffect(() => {
     window.onscroll = function () {
@@ -65,7 +67,7 @@ export default function Main() {
           </div>
           <div className={style.project__detail}>
             <div className={style.box__slider}>
-              <Slider images={findPhotoImgs} />
+              <Slider images={portFolioImgs} />
             </div>
             <div className={style.box__intro}>
               <div className={style.intro}>
@@ -154,7 +156,7 @@ export default function Main() {
           </div>
           <div className={style.project__detail}>
             <div className={style.box__slider}>
-              <Slider images={findPhotoImgs} />
+              <Slider images={gludocMobileImgs} />
             </div>
             <div className={style.box__intro}>
               <div className={style.intro}>
