@@ -1,3 +1,5 @@
+@import "./mixin";
+
 .box__header {
   display: flex;
   align-items: center;
@@ -18,17 +20,28 @@
   cursor: pointer;
   transition: 0.3s linear;
   font-size: 30px;
+  z-index: 1;
 
   &:hover {
     color: black;
   }
 }
 
-.box__menu > h2 {
-  margin-right: 20px;
-  font-size: 25px;
-  color: #b3b19f;
-  cursor: pointer;
+.box__menu {
+  margin-left: auto;
+  display: flex;
+  > div {
+    display: flex;
+    > h2 {
+      margin-right: 20px;
+      font-size: 25px;
+      color: #b3b19f;
+      cursor: pointer;
+    }
+  }
+  > svg {
+    display: none;
+  }
 }
 
 .progress__container {
@@ -44,4 +57,43 @@
   width: 0;
   height: 3px;
   background-color: blueviolet;
+}
+
+@include mobile {
+  .active {
+    opacity: 1 !important;
+  }
+  .box__menu {
+    margin-right: 10px;
+    > div {
+      opacity: 0;
+      transition: all 0.3s;
+      display: flex;
+      flex-direction: column;
+      top: 7vh;
+      background: navajowhite;
+      position: absolute;
+      width: 100%;
+      left: 0;
+      height: 334px;
+
+      > h2 {
+        display: flex;
+        cursor: pointer;
+        top: 50px;
+        flex-direction: column;
+        position: relative;
+      }
+    }
+
+    > svg {
+      display: block;
+      cursor: pointer;
+      position: absolute;
+      top: 17px;
+      right: 10px;
+    }
+  }
+}
+@include tablet {
 }
