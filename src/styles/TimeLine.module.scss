@@ -1,3 +1,4 @@
+@import "./mixin";
 nav {
   margin-top: 13vh;
   position: relative;
@@ -45,8 +46,8 @@ nav {
   max-width: 250px;
   cursor: pointer;
 
-  &:focus {
-  }
+  // &:focus {
+  // }
   &:hover span,
   &:focus span {
     transform: scale(1.2);
@@ -145,5 +146,11 @@ nav {
       outline: none;
     }
     font-size: 1rem;
+  }
+}
+
+@include mobile {
+  nav {
+    display: none;
   }
 }

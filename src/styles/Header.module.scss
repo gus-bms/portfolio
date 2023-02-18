@@ -9,7 +9,7 @@
   top: 0;
   left: 0;
   right: 0;
-  height: 7vh;
+  height: 10vh;
   z-index: 2;
   color: #b3b19f;
   box-shadow: 0 1px 0.3rem rgba(195, 200, 196, 0.8);
@@ -60,15 +60,18 @@
 }
 
 @include mobile {
+  .logo {
+    font-size: 22px;
+  }
   .active {
-    opacity: 1 !important;
+    display: flex !important;
   }
   .box__menu {
     margin-right: 10px;
     > div {
-      opacity: 0;
+      // opacity: 0;
       transition: all 0.3s;
-      display: flex;
+      display: none;
       flex-direction: column;
       top: 7vh;
       background: navajowhite;
@@ -92,6 +95,7 @@
       position: absolute;
       top: 17px;
       right: 10px;
+      font-size: 20px;
     }
   }
 }

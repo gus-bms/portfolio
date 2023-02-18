@@ -20,7 +20,7 @@
 .text__intro {
   position: absolute;
   z-index: 1;
-  font-size: 1.5vw;
+  font-size: calc(10px + 0.8vw);
   left: 37%;
   top: 50%;
   transform: translate(-50%, -50%);
@@ -33,9 +33,9 @@
   align-items: center;
   position: absolute;
   z-index: 1;
-  font-size: 15px;
+  font-size: calc(10px + 0.5vw);
   bottom: 3%;
-  left: 15px;
+  right: 15px;
   color: white;
   text-align: left;
 
@@ -48,7 +48,6 @@
   position: absolute;
   bottom: 0;
   left: 50%;
-  top: 90%;
   animation: bounce 0.4s ease infinite alternate;
 }
 
@@ -60,8 +59,8 @@ article {
   margin-bottom: 10vh;
 
   h1 {
-    font-size: 55px;
-    margin: 3vh 0 3vh;
+    font-size: calc(30px + 1vw);
+    margin: 3vh 0 3vh 0;
     border-bottom: rgb(216, 147, 112) solid;
     line-height: 11vh;
     min-height: 90px;
@@ -76,7 +75,6 @@ article {
 
   div > div {
     display: flex;
-    align-items: center;
     > h2 {
       font-size: 30px;
       font-weight: 600;
@@ -89,7 +87,7 @@ article {
 .box__project {
   > div {
     border-radius: 15px;
-    background-color: #f4f4f4;
+    background-color: #ffcc82;
     padding: 30px 0 10px 30px;
     margin-bottom: 30px;
   }
@@ -101,7 +99,12 @@ article {
       font-size: 27px;
     }
   }
-
+  .box__title {
+    align-items: center;
+  }
+  .project__detail {
+    margin-top: 30px;
+  }
   .box__slider {
     max-width: 40%;
     margin: 0px 30px 0px 30px;
@@ -119,12 +122,12 @@ article {
         padding-left: 1.5em;
         text-indent: -1.5em;
         font-size: 16px;
-        font-weight: 500;
         line-height: 32px;
+        color: #4677a6;
 
         &::before {
           content: "\f068";
-          color: burlywood;
+          color: #4b443c;
           font-family: "Font Awesome 5 Free";
           font-weight: 900;
           margin-right: 10px;
@@ -133,17 +136,21 @@ article {
     }
 
     .skill {
+      color: #4677a6;
       padding: 10px 20px 10px 20px;
       display: block;
       width: 100%;
       p {
         font-size: 15px;
-        font-weight: 500;
         line-height: 32px;
-
+        > button {
+          &:first-child {
+            // margin-left: 100px;
+          }
+        }
         &::before {
           content: "\f121";
-          color: burlywood;
+          color: #4b443c;
           font-family: "Font Awesome 5 Free";
           font-weight: 700;
           margin-right: 10px;
@@ -198,8 +205,106 @@ article {
   }
   /* 공통 영역 */
   article {
-    margin-left: 5vh;
-    margin-right: 5vh;
+    margin: 0 0 0 0;
+  }
+
+  .text__contact {
+    bottom: 40px;
+  }
+
+  /* 프로젝트 영역 */
+  .box__project {
+    > div {
+      border-radius: 15px;
+      background-color: #ffcc82;
+      margin-bottom: 30px;
+      width: 95%;
+      padding: 20px 10px 10px 10px;
+      margin: 10px;
+      margin-bottom: 40px;
+    }
+
+    > div > div {
+      justify-content: center;
+      text-align: -webkit-center;
+      margin-bottom: 10px;
+      padding: 0 7px;
+
+      h2 {
+        font-size: calc(13px + 1vw);
+      }
+
+      button {
+        font-size: calc(10px + 0.4vw);
+      }
+    }
+    .box__slider {
+      max-width: 280px;
+      justify-content: center;
+      margin: 0px 30px 0px 30px;
+    }
+
+    .project__detail {
+      display: block;
+    }
+
+    .box__intro {
+      display: block;
+      width: 100%;
+
+      .intro {
+        padding: 0 0 0 0px;
+        display: block;
+        width: 100%;
+        p {
+          padding: 0 3em 0 1.5em;
+          padding-left: 1.5em;
+          text-indent: -1.5em;
+          font-size: calc(10px + 1vw);
+          line-height: 30px;
+          font-weight: 300;
+          text-align: left;
+
+          &::before {
+            content: "\f068";
+            font-family: "Font Awesome 5 Free";
+            font-weight: 600;
+            margin-right: 10px;
+          }
+        }
+      }
+
+      .skill {
+        padding: 10px 0px 10px 0px;
+        display: block;
+        width: 100%;
+        p {
+          font-size: calc(10px + 1vw);
+          line-height: 32px;
+          text-align: left;
+
+          &::before {
+            content: "\f121";
+            font-family: "Font Awesome 5 Free";
+            font-weight: 600;
+            margin-right: 10px;
+          }
+        }
+      }
+    }
+  }
+
+  .btn__top {
+    height: 60px;
+    font-size: 15px;
+    width: 60px;
+    svg {
+      margin-top: 5px;
+    }
+
+    span {
+      margin-bottom: 3px;
+    }
   }
 }
 

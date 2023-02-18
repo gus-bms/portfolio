@@ -20,9 +20,13 @@ body {
   user-select: none;
 }
 
+p {
+  font-weight: 600;
+}
 .App {
   text-align: center;
-  background-color: #ffe5b229;
+  background-color: #fff6e8;
+  font-family: "Noto Sans KR", sans-serif;
 }
 
 .App-logo {

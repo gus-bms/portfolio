@@ -59,9 +59,9 @@ export default function Main() {
       <article id='projects' className={style.box__project}>
         <h1>Projects.</h1>
         <div>
-          <div>
+          <div className={style.box__title}>
             <h2 className={style.project__title}>Portfolio</h2>
-            <h2 className={style.project__period}>2023.02</h2>
+            <h2 className={style.project__period}>23.02</h2>
             <TypeButton name='#개인' type='P' />
             <TypeButton name='Link' type='L' url='https://github.com/gus-bms/find_photo/' />
           </div>
@@ -92,9 +92,9 @@ export default function Main() {
           </div>
         </div>
         <div>
-          <div>
+          <div className={style.box__title}>
             <h2 className={style.project__title}>Find Photo</h2>
-            <h2 className={style.project__period}>2023.01 </h2>
+            <h2 className={style.project__period}>23.01 </h2>
             <TypeButton name='#개인' type='P' />
             <TypeButton name='Link' type='L' url='https://github.com/gus-bms/find_photo/' />
           </div>
@@ -149,7 +149,7 @@ export default function Main() {
           </div>
         </div>
         <div>
-          <div>
+          <div className={style.box__title}>
             <h2 className={style.project__title}>Gludoc Mobile</h2>
             <TypeButton name='#회사' type='C' />
             <TypeButton name='Link' type='L' url='http://gludoc.com/' />
@@ -202,7 +202,7 @@ export default function Main() {
           </div>
         </div>
         <div>
-          <div>
+          <div className={style.box__title}>
             <h2 className={style.project__title}>Gludoc Web</h2>
             <TypeButton name='#회사' type='C' />
             <TypeButton name='Link' type='L' url='http://gludoc.com/' />
@@ -231,9 +231,6 @@ export default function Main() {
                   <TypeButton name='mysql' type='S' />
                   <TypeButton name='mariaDB' type='S' />
                 </p>
-                <p>Framework: &nbsp;
-                  <TypeButton name='spring 4' type='S' />
-                </p>
                 <p>Build / Deployment: &nbsp;
                   <TypeButton name='jenkins' type='S' />
                   <TypeButton name='aws EC2' type='S' />
@@ -252,7 +249,7 @@ export default function Main() {
           </div>
         </div>
         <div>
-          <div>
+          <div className={style.box__title}>
             <h2 className={style.project__title}>iLAB Solution</h2>
             <TypeButton name='#회사' type='C' />
             <TypeButton name='Link' type='L' url='https://www.bioconnect.co.kr/lims' />
@@ -273,25 +270,20 @@ export default function Main() {
                 <p>Front-End: &nbsp;
                   <TypeButton name='jsp' type='S' />
                   <TypeButton name='c#' type='S' />
-                  <TypeButton name='javascript' type='S' />
                 </p>
                 <p>Back-End: &nbsp;
                   <TypeButton name='java' type='S' />
                   <TypeButton name='mysql' type='S' />
                   <TypeButton name='mariaDB' type='S' />
                 </p>
-                <p>Framework: &nbsp;
-                  <TypeButton name='spring 4' type='S' />
-                </p>
                 <p>Build / Deployment: &nbsp;
                   <TypeButton name='war' type='S' />
                   <TypeButton name='tomcat 8.5' type='S' />
                 </p>
                 <p>Library: &nbsp;
-                  <TypeButton name='pdf.js' type='S' />
                   <TypeButton name='chart.js' type='S' />
-                  <TypeButton name='bootstrap' type='S' />
                   <TypeButton name='tui-grid' type='S' />
+                  <TypeButton name='bootstrap' type='S' />
                 </p>
                 <p>SDK: &nbsp;
                   <TypeButton name='zebra-browser-print' type='S' />

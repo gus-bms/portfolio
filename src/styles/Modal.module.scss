@@ -1,3 +1,5 @@
+@import "./mixin";
+
 /* 모달창 */
 .modal__div {
   z-index: 10;
@@ -18,16 +20,17 @@
   /* 중앙 배치 */
   /* top; bottom; left; right 는 브라우저 기준으로 작동한다. */
   /* translate는 본인의 크기 기준으로 작동한다. */
-  position: absolute;
-  top: 50%;
+  position: relative;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%);
   border-radius: 8px;
 
   img {
     object-fit: cover;
     max-width: 60vw;
     height: auto;
+    max-height: 500px;
+    min-width: 300px;
     cursor: pointer;
   }
 }
@@ -37,7 +40,15 @@
   position: absolute;
   height: 28px;
   background: white !important;
-  bottom: 15%;
-  width: 250px;
-  left: calc((100% - 250px) / 2);
+  width: 100px;
+  left: 50%;
+  bottom: -38px;
+  margin: 0;
+  transform: translate(-50%);
+}
+
+@include mobile {
+  .container > img {
+    min-width: 350px !important;
+  }
 }

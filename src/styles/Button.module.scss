@@ -31,7 +31,9 @@ button {
   font-weight: 550;
   background-color: rgba(135, 131, 120, 0.15);
   color: rgb(105, 64, 165);
-  min-width: 80px;
-  width: auto;
+  width: auto !important;
+  min-width: none !important;
   height: 33px;
+  padding: 0px 10px 0 10px;
+  margin-left: 10px;
 }

@@ -28,10 +28,10 @@ export default function Modal(props: Iprops) {
     }}>
       <div className={style.container}>
         <img src={props.url} alt='project' />
+        <button className={style.close} onClick={() => props.setIsOpen(false)}>
+          닫기
+        </button>
       </div>
-      <button className={style.close} onClick={() => props.setIsOpen(false)}>
-        닫기
-      </button>
     </div>
   )
 }

@@ -1,3 +1,4 @@
+@import "./mixin";
 .box__footer {
   height: 20vh;
   align-items: center;
@@ -21,7 +22,13 @@
 
 .copyright {
   margin-bottom: 40px !important;
-  font-size: calc(12px + 1vw);
+  font-size: calc(12px + 0.5vw);
   color: #b3b19f;
   margin: 0;
+}
+
+@include mobile {
+  .brand__logo {
+    font-size: 40px;
+  }
 }
