@@ -3,6 +3,7 @@ import { faAngleLeft, faAngleRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import style from '../styles/Slider.module.scss'
 import Modal from './ImgModal'
+import TypeButton from './TypeButton';
 
 interface IProps {
   images: string[],
@@ -52,6 +53,7 @@ export default function Slider(props: IProps) {
       // getting difference value that needs to add or reduce from carousel left to take middle img center
       let valDifference = firstImgWidth - positionDiff;
       console.log(valDifference)
+      if (Number.isNaN(valDifference)) return
       if (carouselRef.current.scrollLeft > prevScrollLeft) { // if user is scrolling to the right
         return carouselRef.current.scrollLeft += positionDiff > firstImgWidth / 3
           ? (
@@ -59,7 +61,7 @@ export default function Slider(props: IProps) {
             valDifference
           )
           : -positionDiff;
-      }
+      } else if (carouselRef.current.scrollLeft === prevScrollLeft) return
       return carouselRef.current.scrollLeft -= positionDiff > firstImgWidth / 3
         ? (
           setCurrent(x => x - 1),
@@ -79,16 +81,27 @@ export default function Slider(props: IProps) {
         onMouseUp={dragStop}
         onMouseLeave={dragStop}
       >
-        <div>
-          {props.images && props.images.map((img, idx) => (
-            <img key={idx} ref={el => (imgRef.current[idx] = el)}
+        {props.images && props.images.map((img, idx) => (
+          <div key={idx} className={style.box__img}>
+            <img ref={el => (imgRef.current[idx] = el)}
               src={`${process.env.PUBLIC_URL}/assets/projects/${img}.png`} alt='project' onClick={() => {
                 setIsOpen(true)
                 setUrl(`${process.env.PUBLIC_URL}/assets/projects/${img}.png`)
               }}
             />
-          ))}
-        </div>
+            <TypeButton type='I' name={'확대하기'} style={{
+              bottom: '5px',
+              position: 'absolute',
+              left: '50%',
+              transform: 'translate(calc(-50% - 18px))',
+              zIndex: 1,
+              cursor: 'pointer'
+            }} onClick={() => {
+              setIsOpen(true)
+              setUrl(`${process.env.PUBLIC_URL}/assets/projects/${img}.png`)
+            }} />
+          </div>
+        ))}
       </div>
       <FontAwesomeIcon id='left' className={style.button__left} icon={faAngleLeft} size='1x' color='black' />
       <FontAwesomeIcon id='right' className={style.button__right} icon={faAngleRight} size='1x' color='black' />

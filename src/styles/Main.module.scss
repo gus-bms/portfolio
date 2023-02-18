@@ -142,7 +142,7 @@ article {
       width: 100%;
       p {
         font-size: 15px;
-        line-height: 32px;
+        line-height: 39px;
         > button {
           &:first-child {
             // margin-left: 100px;
@@ -178,7 +178,7 @@ article {
   width: 80px;
   transition: all 0.3s;
   visibility: hidden;
-  background: linear-gradient(180deg, #b3b19f, #d89370);
+  background: linear-gradient(180deg, #fffdf9, #ffbe60);
   opacity: 0;
   svg {
     margin-top: 10px;
@@ -260,9 +260,9 @@ article {
           padding: 0 3em 0 1.5em;
           padding-left: 1.5em;
           text-indent: -1.5em;
-          font-size: calc(10px + 1vw);
+          font-size: calc(10px + 0.7vw);
           line-height: 30px;
-          font-weight: 300;
+          font-weight: 600;
           text-align: left;
 
           &::before {
@@ -279,7 +279,7 @@ article {
         display: block;
         width: 100%;
         p {
-          font-size: calc(10px + 1vw);
+          font-size: calc(10px + 0.7vw);
           line-height: 32px;
           text-align: left;
 
