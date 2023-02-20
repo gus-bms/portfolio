@@ -3,6 +3,9 @@ $breakpoint-tablet: 960px;
 $breakpoint-desktop: 1024px;
 
 // ----------- LIGHT MODE ----------- //
+// $background-color
+$bg-apricot-00: #fff6e8;
+
 // $menu-bar-color:
 $bg-white-01: #fffdf9;
 $bg-purple-01: blueviolet;
@@ -20,9 +23,38 @@ $fc-apricot-01: #d89370;
 // $project-color:
 $fc-apricot-02: #ffcc82;
 
+// $timeline-color:
+$bg-apricot-03: #ffbe60;
+$bg-apricot-04: #b56b00;
+$bg-apricot-05: #c67500;
+$bg-apricot-06: #d77f00;
+$bg-apricot-07: #e88900;
+$bg-apricot-08: #ffc571;
+$bg-black-02: #0e0a07;
+
 // $button-color:
-// $fc-white-01
+$bg-apricot-09: #d89370c9;
+$fc-red-01: #602a2a;
+$bg-khaki-05: #b3b19f;
+$fc-gray-01: #665f67;
+$bg-apricot-10: rgba(135, 131, 120, 0.15);
+$fc-purple-01: #441687;
 
 // ----------- DARK MODE ----------- //
+// $background-color
+$bg-black-00: #2c2c2c;
+
 // $menu-bar-color:
 $bg-black-01: #232323;
+
+// $timeline-color:
+$bg-gray-00: #5a5c67;
+$bg-gray-02: #1b1b1e;
+$bg-gray-03: #232327;
+$bg-gray-04: #2a2b31;
+$bg-gray-05: #32333a;
+$bg-gray-06: #1b1b1e;
+$fc-white-02: #f9f9fa;
+
+// $project-color:
+$bg-gray-07: #6a6c79;

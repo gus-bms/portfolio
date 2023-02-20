@@ -1,3 +1,5 @@
+@import "./styles/theme";
+
 ::-webkit-scrollbar {
   width: 10px;
 }
@@ -26,7 +28,7 @@ p {
 
 .App {
   text-align: center;
-  background-color: #fff6e8;
+  background-color: var(--bg-color);
   font-family: "Noto Sans KR", sans-serif;
 }
 

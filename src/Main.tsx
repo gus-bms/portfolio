@@ -328,10 +328,10 @@ export default function Main() {
       </article>
 
       <div ref={topRef} className={style.box__util}>
-        <button className={style.btn__brightMode} onClick={() => setIsDayMode(!isDaymode)}>
+        {/* <button className={style.btn__brightMode} onClick={() => setIsDayMode(!isDaymode)}>
           <FontAwesomeIcon ref={dayRef} className={style.day} icon={faSun} size='2x' color='white' />
           <FontAwesomeIcon ref={nightRef} className={style.night} icon={faMoon} size='2x' color='white' />
-        </button>
+        </button> */}
         <button className={style.btn__top} onClick={() => window.scrollTo({ behavior: 'smooth', top: 0 })}>
           <FontAwesomeIcon icon={faAnglesUp} size='2x' color='black' />
           <span>Top</span>

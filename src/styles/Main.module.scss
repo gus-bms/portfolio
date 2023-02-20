@@ -247,9 +247,6 @@ article {
   /* 프로젝트 영역 */
   .box__project {
     > div {
-      border-radius: 15px;
-      background-color: #ffcc82;
-      margin-bottom: 30px;
       width: 95%;
       padding: 20px 10px 10px 10px;
       margin: 10px;
@@ -257,7 +254,6 @@ article {
     }
 
     > div > div {
-      justify-content: center;
       text-align: -webkit-center;
       margin-bottom: 10px;
       padding: 0 7px;
@@ -273,7 +269,6 @@ article {
     .box__slider {
       max-width: 280px;
       justify-content: center;
-      margin: 0px 30px 0px 30px;
     }
 
     .project__detail {
@@ -281,45 +276,29 @@ article {
     }
 
     .box__intro {
-      display: block;
-      width: 100%;
-
       .intro {
         padding: 0 0 0 0px;
-        display: block;
-        width: 100%;
         p {
           padding: 0 3em 0 1.5em;
-          padding-left: 1.5em;
-          text-indent: -1.5em;
           font-size: calc(10px + 0.7vw);
           line-height: 30px;
-          font-weight: 600;
           text-align: left;
 
           &::before {
-            content: "\f068";
-            font-family: "Font Awesome 5 Free";
             font-weight: 600;
-            margin-right: 10px;
           }
         }
       }
 
       .skill {
         padding: 10px 0px 10px 0px;
-        display: block;
-        width: 100%;
         p {
           font-size: calc(10px + 0.7vw);
           line-height: 32px;
           text-align: left;
 
           &::before {
-            content: "\f121";
-            font-family: "Font Awesome 5 Free";
             font-weight: 600;
-            margin-right: 10px;
           }
         }
       }

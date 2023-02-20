@@ -6,7 +6,9 @@ import style from '../styles/Header.module.scss'
 
 export default function Header() {
   const pbRef = useRef<HTMLDivElement | null>(null);
+  const switchRef = useRef<HTMLInputElement | null>(null)
   const [isToggle, setIsToggle] = useState<boolean>(false)
+  const [isLight, setIsLight] = useState<boolean>(true)
   const [isMobile, setIsMobile] = useState<boolean>(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent))
   const menuRef = useRef<HTMLDivElement | null>(null)
   const handleLogo = () => {
@@ -43,13 +45,12 @@ export default function Header() {
 
   useEffect(() => {
     console.log(isMobile)
-    // if (isToggle) {
-    //   menuRef.current?.classList.add(style.active)
-    //   return
-    // }
-    // menuRef.current?.classList.remove(style.active)
-
   }, [isMobile])
+
+  useEffect(() => {
+    console.log(isLight)
+    isLight ? document.documentElement.setAttribute("data-theme", "light") : document.documentElement.setAttribute("data-theme", "dark");
+  }, [isLight])
 
   return (
     <>
@@ -59,6 +60,12 @@ export default function Header() {
           <div className={style.box__menu} >
             {/* <FontAwesomeIcon icon={!isToggle ? faBars : faMinus} color='black' size='2x' onClick={() => setIsToggle(!isToggle)} /> */}
             <div ref={menuRef} >
+              <div ref={switchRef} className={style.check__box} style={{
+                marginTop: '5px',
+                marginRight: '19px'
+              }}>
+                <input type="checkbox" onClick={() => setIsLight(!isLight)} />
+              </div>
               <h2 onClick={() => {
                 setIsToggle(false)
                 moveAnchor('history')

@@ -1,5 +1,5 @@
 @import "../styles/mixin";
-@import url("https://fonts.googleapis.com/css?family=Niramit:300,300i,700");
+@import "../styles/theme";
 
 // reset some browser default styles
 * {
@@ -8,28 +8,9 @@
   box-sizing: border-box;
 }
 
-// colors
-$primary: #b56b00;
-$danger: #c67500;
-$success: #d77f00;
-$warning: #e88900;
-$secondary: #0e0a07;
-$graduation: #ffc571;
-$info: #11cdef;
-
 // timeline variables
-$body-bg: #1e1e2f;
-$timeline-before-bg: #222a42;
-$timeline-body-bg: #ffbe60;
 $timeline-body-round: 3px;
 $timeline-body-shadow: 1px 3px 9px rgba(0, 0, 0, 0.1);
-$timeline-icon-bg: #ffbe60;
-
-// body {
-//   font-family: "K2D", sans-serif;
-//   background: $body-bg;
-//   letter-spacing: 1px;
-// }
 
 // page container
 .container {
@@ -51,7 +32,7 @@ p {
   position: relative;
   padding-left: 4rem;
   margin: 0 0 0 30px;
-  color: white;
+  color: var(--timeline-fc-color-01);
 
   &:before {
     content: "";
@@ -60,7 +41,7 @@ p {
     top: 0;
     width: 4px;
     height: 100%;
-    background: $timeline-body-bg;
+    background: var(--timeline-bg-color);
   }
 
   .timeline_container {
@@ -76,7 +57,7 @@ p {
       border-radius: 50%;
       text-align: center;
       font-size: 2rem;
-      background: $timeline-icon-bg;
+      background: var(--timeline-bg-color);
 
       i {
         font-size: 25px;
@@ -96,7 +77,7 @@ p {
     .timeline_body {
       display: block;
       width: 100%;
-      background: $timeline-body-bg;
+      background: var(--timeline-bg-color);
       border-radius: $timeline-body-round;
       padding: 20px 20px 15px;
       box-shadow: $timeline-body-shadow;
@@ -117,7 +98,7 @@ p {
         margin-bottom: 1.4rem;
 
         .badge {
-          background: $secondary;
+          background: var(--timeline-ic-color);
           padding: 4px 8px;
           margin-right: 10px;
           border-radius: 3px;
@@ -137,10 +118,10 @@ p {
       p {
         font-size: calc(10px + 0.4vw);
         line-height: 38px;
-        color: #4677a6;
+        color: var(--timeline-fc-color-02);
         &::before {
           content: "\f303";
-          color: #4b443c;
+          color: var(--timeline-fc-color-02);
           font-family: "Font Awesome 5 Free";
           font-weight: 900;
           margin-right: 10px;
@@ -152,15 +133,7 @@ p {
     &.primary {
       .badge,
       .timeline-icon {
-        background: $primary !important;
-      }
-    }
-
-    // Info Timeline
-    &.info {
-      .badge,
-      .timeline-icon {
-        background: $info !important;
+        background: var(--timeline-badge-bg-color-01) !important;
       }
     }
 
@@ -168,7 +141,7 @@ p {
     &.success {
       .badge,
       .timeline-icon {
-        background: $success !important;
+        background: var(--timeline-badge-bg-color-03) !important;
       }
     }
 
@@ -176,7 +149,7 @@ p {
     &.warning {
       .badge,
       .timeline-icon {
-        background: $warning !important;
+        background: var(--timeline-badge-bg-color-04) !important;
       }
     }
 
@@ -184,7 +157,7 @@ p {
     &.danger {
       .badge,
       .timeline-icon {
-        background: $danger !important;
+        background: var(--timeline-badge-bg-color-02) !important;
       }
     }
 
@@ -192,45 +165,8 @@ p {
     &.graduation {
       .badge,
       .timeline-icon {
-        background: $graduation !important;
+        background: var(--timeline-badge-bg-color-05) !important;
       }
-    }
-  }
-}
-
-.author {
-  font-family: inherit;
-  padding: 3em;
-  text-align: center;
-  width: 100%;
-  color: white;
-
-  a:link,
-  a:visited {
-    color: white;
-    &:hover {
-      text-decoration: none;
-    }
-  }
-  .btn:link,
-  .btn:visited {
-    margin-top: 1em;
-    text-decoration: none;
-    display: inline-block;
-    font-family: inherit;
-    font-weight: 100;
-    color: white;
-    text-align: center;
-    vertical-align: middle;
-    user-select: none;
-    background-color: black;
-    padding: 1.5em 2rem;
-    border-radius: 1em;
-    transition: 0.5s all;
-    &:hover,
-    &:focus,
-    &:active {
-      background-color: lighten(black, 10%);
     }
   }
 }

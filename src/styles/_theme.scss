@@ -1,5 +1,8 @@
 @import "./var";
 html[data-theme="light"] {
+  //background
+  --bg-color: #{$bg-apricot-00};
+
   //header + footer
   --header-footer-bg-color: #{$bg-white-01};
   --header-ft-color: #{$fc-khaki-01};
@@ -18,10 +21,70 @@ html[data-theme="light"] {
 
   // main - button
   --main-button-ic-color: #{$fc-white-01};
+
+  // timeline
+  --timeline-fc-color-01: #{$fc-white-01};
+  --timeline-fc-color-02: #{$fc-khaki-04};
+  --timeline-bg-color: #{$bg-apricot-03};
+  --timeline-badge-bg-color-01: #{$bg-apricot-04};
+  --timeline-badge-bg-color-02: #{$bg-apricot-05};
+  --timeline-badge-bg-color-03: #{$bg-apricot-06};
+  --timeline-badge-bg-color-04: #{$bg-apricot-07};
+  --timeline-badge-bg-color-05: #{$bg-apricot-08};
+  --timeline-ic-color: #{$bg-black-02};
+
+  // button
+  --btn-bg-color-01: #{$bg-apricot-09};
+  --btn-fc-color-01: #{$fc-red-01};
+  --btn-bg-color-02: #{$bg-khaki-05};
+  --btn-fc-color-02: #{$fc-gray-01};
+  --btn-bg-color-03: #{$bg-black-02};
+  --btn-fc-color-03: #{$fc-white-01};
+  --btn-bg-color-04: #{$bg-apricot-10};
+  --btn-fc-color-04: #{$fc-purple-01};
 }
 
 html[data-theme="dark"] {
+  //background
+  --bg-color: #{$bg-black-00};
+
+  //header + footer
   --header-footer-bg-color: #{$bg-black-01};
   --header-ft-color: #{$fc-khaki-01};
   --header-pg-bar-color: #{$bg-purple-01};
+
+  // main - profile
+  --main-img-ft-color: #{$fc-white-01};
+  --main-article-hd-ft-color: #{$fc-white-01};
+  --main-article-hd-bd-color: #{$fc-apricot-01};
+
+  // main - projects
+  --main-project-bg-color: #{$bg-gray-07};
+  --main-project-hd-ft-color: #{$fc-white-02};
+  --main-project-ft-color: #{$fc-white-02};
+  --main-project-ic-color: #{$fc-white-02};
+
+  // main - button
+  --main-button-ic-color: #{$fc-white-01};
+
+  // timeline
+  --timeline-fc-color-01: #{$fc-white-01};
+  --timeline-fc-color-02: #{$fc-white-02};
+  --timeline-bg-color: #{$bg-gray-00};
+  --timeline-badge-bg-color-01: #{$bg-gray-02};
+  --timeline-badge-bg-color-02: #{$bg-gray-03};
+  --timeline-badge-bg-color-03: #{$bg-gray-04};
+  --timeline-badge-bg-color-04: #{$bg-gray-05};
+  --timeline-badge-bg-color-05: #{$bg-gray-06};
+  --timeline-ic-color: #{$fc-white-02};
+
+  // button
+  --btn-bg-color-01: #{$bg-apricot-09};
+  --btn-fc-color-01: #{$fc-red-01};
+  --btn-bg-color-02: #{$bg-khaki-05};
+  --btn-fc-color-02: #{$fc-gray-01};
+  --btn-bg-color-03: #{$bg-black-02};
+  --btn-fc-color-03: #{$fc-white-01};
+  --btn-bg-color-04: #{$bg-apricot-10};
+  --btn-fc-color-04: #{$fc-purple-01};
 }

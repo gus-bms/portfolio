@@ -1,3 +1,5 @@
+@import "./theme";
+
 .button_base {
   width: 70px;
   height: 40px;
@@ -19,25 +21,25 @@
 }
 
 .personal {
-  background-color: #d89370c9;
-  color: #602a2a;
+  background-color: var(--btn-bg-color-01);
+  color: var(--btn-fc-color-01);
 }
 
 .company {
-  background-color: #b3b19f;
-  color: #665f67;
+  background-color: var(--btn-bg-color-02);
+  color: var(--btn-fc-color-02);
 }
 
 .link {
-  background-color: black;
-  color: white;
+  background-color: var(--btn-bg-color-03);
+  color: var(--btn-fc-color-03);
   cursor: pointer;
 }
 
 .skill {
   font-weight: 550;
-  background-color: rgba(135, 131, 120, 0.15);
-  color: #441687;
+  background-color: var(--btn-bg-color-04);
+  color: var(--btn-fc-color-04);
   width: auto !important;
   min-width: none !important;
   height: 33px;
