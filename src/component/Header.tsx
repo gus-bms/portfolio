@@ -69,7 +69,7 @@ export default function Header() {
                 moveAnchor('projects')
               }
               }>projects</h2>
-              <h2 >certi</h2>
+              {/* <h2 >certi</h2> */}
             </div>
           </div>
 

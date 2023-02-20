@@ -1,6 +1,9 @@
 import style from '../styles/Button.module.scss'
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { IconProp } from '@fortawesome/fontawesome-svg-core';
 
 interface iProps {
+  icon?: IconProp;
   name: string;
   type: string;
   url?: string;
@@ -24,7 +27,8 @@ export default function TypeButton(props: iProps) {
   }
 
   return (
-    <button className={selectClass()} style={props.style} onClick={props.onClick ? props.onClick : () => { '' }}>
+    <button className={[style.button_base, selectClass()].join(' ')} style={props.style} onClick={props.onClick ? props.onClick : () => { '' }}>
+      {props.icon ? <FontAwesomeIcon icon={props.icon} color='black' size='1x' /> : ''}
       {props.url ? <a href={props.url} target="_blank" rel="noreferrer">{props.name}</a> : <span>{props.name}</span>}
     </button>
   )

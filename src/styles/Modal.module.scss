@@ -48,13 +48,19 @@
   bottom: -38px;
   margin: 0;
   transform: translate(-50%);
+  border: none;
 }
 
 @include mobile {
   .container {
-    transform: translate(-55%, -50%);
+    // left: 13.6% !important;
+    width: auto;
     > img {
       min-width: 350px !important;
     }
+    // .close {
+    //   left: 40%;
+    //   transform: translate(35%);
+    // }
   }
 }

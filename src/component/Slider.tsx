@@ -1,5 +1,5 @@
 import React, { useRef, useState } from 'react'
-import { faAngleLeft, faAngleRight } from "@fortawesome/free-solid-svg-icons";
+import { faAngleLeft, faAngleRight, faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import style from '../styles/Slider.module.scss'
 import Modal from './ImgModal'
@@ -16,28 +16,55 @@ export default function Slider(props: IProps) {
   const carouselRef = useRef<HTMLDivElement | null>(null)
   let isDragStart = false, prevPageX: number, prevScrollLeft: number, positionDiff: number;
 
+  const onStart = (event: React.TouchEvent | React.MouseEvent) => {
+    event.persist();
+    console.log('event ', event);
+    if (event.nativeEvent instanceof TouchEvent) {
+      console.log(event.nativeEvent.touches);
+    }
 
-  const dragStart = (e: React.MouseEvent<HTMLDivElement>) => {
+    if (event.nativeEvent instanceof MouseEvent) {
+      console.log(event.nativeEvent.screenX);
+    }
+  };
+
+  const dragStart = (e: React.MouseEvent<HTMLDivElement> | React.TouchEvent<HTMLDivElement>) => {
 
     isDragStart = true
-    prevPageX = e.pageX
+
+    if (e.nativeEvent instanceof TouchEvent) {
+      prevPageX = e.nativeEvent.touches[0].pageX
+    } else if (e.nativeEvent instanceof MouseEvent) {
+      prevPageX = e.nativeEvent.pageX
+    }
 
     if (carouselRef.current)
       prevScrollLeft = carouselRef.current.scrollLeft;
 
   }
 
-  const dragging = (e: React.MouseEvent<HTMLDivElement>) => {
+  const dragging = (e: React.MouseEvent<HTMLDivElement> | React.TouchEvent<HTMLDivElement>) => {
     if (!isDragStart) return
     e.preventDefault();
     if (carouselRef.current != null) {
-      carouselRef.current.scrollLeft = e.pageX
-      positionDiff = e.pageX - prevPageX;
+
+      if (e.nativeEvent instanceof TouchEvent) {
+        carouselRef.current.scrollLeft = e.nativeEvent.touches[0].pageX
+        positionDiff = e.nativeEvent.touches[0].pageX - prevPageX;
+      } else if (e.nativeEvent instanceof MouseEvent) {
+        carouselRef.current.scrollLeft = e.nativeEvent.pageX
+        positionDiff = e.nativeEvent.pageX - prevPageX;
+      }
+
+      // carouselRef.current.scrollLeft = e.pageX
+      // positionDiff = e.pageX - prevPageX;
+
       carouselRef.current.scrollLeft = prevScrollLeft - positionDiff
+
     }
   }
 
-  const dragStop = (e: React.MouseEvent<HTMLDivElement>) => {
+  const dragStop = (e: React.MouseEvent<HTMLDivElement> | React.TouchEvent<HTMLDivElement>) => {
     if (!isDragStart) return
     isDragStart = false
     autoSlide();
@@ -76,9 +103,13 @@ export default function Slider(props: IProps) {
     <div className={style.container}>
       <div className={style.box__slider} ref={carouselRef}
         onMouseDown={dragStart}
-        // onTouchStart={dragStart}
+        onTouchStart={dragStart}
+
         onMouseMove={dragging}
+        onTouchMove={dragging}
+
         onMouseUp={dragStop}
+        onTouchEnd={dragStop}
         onMouseLeave={dragStop}
       >
         {props.images && props.images.map((img, idx) => (
@@ -89,17 +120,18 @@ export default function Slider(props: IProps) {
                 setUrl(`${process.env.PUBLIC_URL}/assets/projects/${img}.png`)
               }}
             />
-            <TypeButton type='I' name={'확대하기'} style={{
+            <TypeButton type='I' name={'zoom'} style={{
               bottom: '5px',
               position: 'absolute',
               left: '50%',
               transform: 'translate(calc(-50% - 18px))',
               zIndex: 1,
-              cursor: 'pointer'
+              cursor: 'pointer',
+              width: '90px'
             }} onClick={() => {
               setIsOpen(true)
               setUrl(`${process.env.PUBLIC_URL}/assets/projects/${img}.png`)
-            }} />
+            }} icon={faMagnifyingGlass} />
           </div>
         ))}
       </div>

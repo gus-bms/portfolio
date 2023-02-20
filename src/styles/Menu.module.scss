@@ -1,4 +1,5 @@
 .menubutton {
+  display: flex;
   position: absolute;
   transform: (50%, -50%);
   right: 10px;
@@ -107,4 +108,71 @@
   .sidenav {
     width: 60%;
   }
+}
+
+.check__box {
+  // transform: scale(2);
+  opacity: 0;
+  transition: all 0.5s;
+  margin-top: 7px;
+  margin-right: 10px;
+}
+
+input[type="checkbox"] {
+  position: relative;
+  appearance: none;
+  width: 70px;
+  height: 30px;
+  background: #ccc;
+  border-radius: 50px;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+input:checked[type="checkbox"] {
+  background: #b56b00;
+  &::before {
+    content: "\f186";
+    font-weight: 600;
+    color: white;
+    font-family: "Font Awesome 5 Free";
+    right: 44px;
+    left: 9px;
+    top: 50%;
+    font-size: 16px;
+    transform: translate(0, -50%);
+    position: absolute;
+  }
+}
+
+input[type="checkbox"] {
+  &::before {
+    content: "\f185";
+    font-weight: 600;
+    color: #4b443c;
+    font-family: "Font Awesome 5 Free";
+    left: 45px;
+    top: 50%;
+    font-size: 16px;
+    transform: translate(0, -50%);
+    position: absolute;
+  }
+  &::after {
+    position: absolute;
+    content: "";
+    width: 30px;
+    height: 30px;
+    top: 0;
+    left: 0;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    transform: scale(1.1);
+    transition: 0.4s;
+  }
+}
+
+input:checked[type="checkbox"]::after {
+  left: 60%;
 }

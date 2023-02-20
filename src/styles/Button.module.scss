@@ -1,4 +1,4 @@
-button {
+.button_base {
   width: 70px;
   height: 40px;
   font-size: 13px;
@@ -8,6 +8,13 @@ button {
   a {
     text-decoration-line: none;
     color: white;
+  }
+  svg {
+    display: flex !important;
+    position: absolute;
+    top: 14px;
+    left: 0;
+    margin-left: 14px;
   }
 }
 

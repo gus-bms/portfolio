@@ -1,17 +1,48 @@
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import style from './styles/Main.module.scss'
-import { faAngleDown, faEnvelope, faAnglesUp } from "@fortawesome/free-solid-svg-icons";
+import { faAngleDown, faEnvelope, faAnglesUp, faSun, faMoon } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import TypeButton from './component/TypeButton';
 import TimeLine from './component/TimeLine';
 import Slider from './component/Slider';
 
 export default function Main() {
-  const topRef = useRef<HTMLButtonElement | null>(null)
+  const topRef = useRef<HTMLDivElement | null>(null)
+  const dayRef = useRef<SVGSVGElement | null>(null)
+  const nightRef = useRef<SVGSVGElement | null>(null)
+  const [isDaymode, setIsDayMode] = useState<boolean>(true) //true : day false: night
+
   const findPhotoImgs = ['find_photo1', 'find_photo2', 'find_photo3', 'find_photo4']
   const portFolioImgs = ['portfolio_1', 'portfolio_2', 'portfolio_1']
   const gludocMobileImgs = ['gludoc_mobile_1', 'gludoc_mobile_2', 'gludoc_mobile_3', 'gludoc_mobile_4', 'gludoc_mobile_5', 'gludoc_mobile_6', 'gludoc_mobile_7']
 
+  useEffect(() => {
+    if (dayRef.current && nightRef.current) {
+      // eslint-disable-next-line @typescript-eslint/no-unused-expressions
+      isDaymode
+        ? (
+          dayRef.current.style.opacity = '1',
+          dayRef.current.style.visibility = 'visible',
+          dayRef.current.style.marginLeft = '0',
+
+          nightRef.current.style.opacity = '0',
+          nightRef.current.style.visibility = 'hidden',
+          nightRef.current.style.marginLeft = '-150px',
+          nightRef.current.style.transform = 'translate(0, 0)'
+        ) : (
+          nightRef.current.style.opacity = '1',
+          nightRef.current.style.visibility = 'visible',
+          nightRef.current.style.marginLeft = '0',
+          nightRef.current.style.paddingBottom = '155px',
+          nightRef.current.style.transform = 'translate(0, -30%)',
+
+          dayRef.current.style.opacity = '0',
+          dayRef.current.style.visibility = 'hidden',
+          dayRef.current.style.marginLeft = '-150px'
+        )
+    }
+
+  }, [isDaymode])
   useEffect(() => {
     window.onscroll = function () {
       var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
@@ -293,10 +324,17 @@ export default function Main() {
           </div>
         </div>
       </article>
-      <button ref={topRef} className={style.btn__top} onClick={() => window.scrollTo({ behavior: 'smooth', top: 0 })}>
-        <FontAwesomeIcon icon={faAnglesUp} size='2x' color='black' />
-        <span>Top</span>
-      </button>
+
+      <div ref={topRef} className={style.box__util}>
+        <button className={style.btn__brightMode} onClick={() => setIsDayMode(!isDaymode)}>
+          <FontAwesomeIcon ref={dayRef} className={style.day} icon={faSun} size='2x' color='white' />
+          <FontAwesomeIcon ref={nightRef} className={style.night} icon={faMoon} size='2x' color='white' />
+        </button>
+        <button className={style.btn__top} onClick={() => window.scrollTo({ behavior: 'smooth', top: 0 })}>
+          <FontAwesomeIcon icon={faAnglesUp} size='2x' color='black' />
+          <span>Top</span>
+        </button>
+      </div>
       {/*       
       <div className={style.box_skill}>
         <h1>Skills.</h1>

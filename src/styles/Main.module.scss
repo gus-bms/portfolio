@@ -163,29 +163,60 @@ article {
 .box__contact > h2 {
   display: flex;
   align-items: center;
+  position: fixed;
 }
 
-.btn__top {
-  position: fixed;
-  cursor: pointer;
-  right: 20px;
-  bottom: 50px;
-  border-radius: 17px;
-  display: grid;
-  justify-items: center;
-  height: 80px;
-  font-size: 20px;
-  width: 80px;
+.box__util {
+  display: flex;
   transition: all 0.3s;
-  visibility: hidden;
-  background: linear-gradient(180deg, #fffdf9, #ffbe60);
   opacity: 0;
-  svg {
-    margin-top: 10px;
-  }
 
-  span {
-    margin-bottom: 3px;
+  button {
+    position: fixed;
+    cursor: pointer;
+    border-radius: 17px;
+    display: grid;
+    justify-items: center;
+    height: 80px;
+    font-size: 20px;
+    width: 80px;
+    border: none;
+  }
+  .btn__brightMode {
+    align-items: center;
+    right: 120px;
+    bottom: 50px;
+    color: white;
+    background: linear-gradient(180deg, #fffdf9, #ffbe60);
+    svg {
+      transition: all 0.3s;
+    }
+    .day {
+      opacity: 1;
+      margin-top: 50%;
+      transform: translate(0, -50%);
+    }
+    .night {
+      visibility: hidden;
+      opacity: 0;
+      margin-left: -150px;
+      // margin-top: 50%;
+      transform: translate(0, -30%);
+    }
+  }
+  .btn__top {
+    right: 20px;
+    bottom: 50px;
+    // visibility: hidden;
+    background: linear-gradient(180deg, #fffdf9, #ffbe60);
+    // opacity: 0;
+    svg {
+      margin-top: 10px;
+    }
+
+    span {
+      margin-bottom: 3px;
+    }
   }
 }
 
@@ -294,12 +325,19 @@ article {
     }
   }
 
-  .btn__top {
-    height: 60px;
-    font-size: 15px;
-    width: 60px;
+  .box__util {
+    .btn__brightMode {
+      display: none;
+    }
+    button {
+      height: 60px;
+      font-size: 15px;
+      width: 60px;
+      font-size: 13px;
+    }
+
     svg {
-      margin-top: 5px;
+      margin-top: 10px;
     }
 
     span {
