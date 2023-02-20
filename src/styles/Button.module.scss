@@ -9,7 +9,7 @@
   margin-left: 18px;
   a {
     text-decoration-line: none;
-    color: white;
+    color: var(--btn-fc-color-03);
   }
   svg {
     display: flex !important;
@@ -32,7 +32,6 @@
 
 .link {
   background-color: var(--btn-bg-color-03);
-  color: var(--btn-fc-color-03);
   cursor: pointer;
 }
 

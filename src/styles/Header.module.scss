@@ -23,7 +23,7 @@
   font-size: 30px;
   z-index: 1;
   &:hover {
-    color: black;
+    color: var(--header-hv-color);
   }
 }
 
@@ -37,6 +37,10 @@
       font-size: 25px;
       color: var(--header-ft-color);
       cursor: pointer;
+      transition: 0.3s linear;
+      &:hover {
+        color: var(--header-hv-color);
+      }
     }
   }
   > svg {

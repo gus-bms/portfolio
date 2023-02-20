@@ -5,7 +5,7 @@ import style from '../styles/Menu.module.scss'
 
 export default function SliderMenu() {
   const [isOpen, setIsOpen] = useState<boolean>(false)
-  const [isLight, setIsLight] = useState<boolean>(true)
+  const [isLight, setIsLight] = useState<boolean>(document.documentElement.getAttribute("data-theme") === 'light' ? true : false)
   const switchRef = useRef<HTMLInputElement | null>(null)
 
   const moveAnchor = (target: string) => {
@@ -20,10 +20,22 @@ export default function SliderMenu() {
 
   useEffect(() => {
     if (switchRef.current) {
-      isOpen ? switchRef.current.style.opacity = '1' : switchRef.current.style.opacity = '0'
+      // eslint-disable-next-line @typescript-eslint/no-unused-expressions
+      isOpen ? (
+        switchRef.current.style.opacity = '1',
+        switchRef.current.style.visibility = 'visible'
+      ) : (
+        switchRef.current.style.visibility = 'hidden',
+        switchRef.current.style.opacity = '0'
+      )
     }
 
   }, [isOpen])
+
+  useEffect(() => {
+    console.log(isLight)
+    document.documentElement.getAttribute("data-theme") === 'light' ? setIsLight(true) : setIsLight(false)
+  }, [])
 
   useEffect(() => {
     console.log(isLight)
@@ -37,7 +49,7 @@ export default function SliderMenu() {
       </div>
       <div className={style.menubutton} >
         <div ref={switchRef} className={style.check__box}>
-          <input type="checkbox" onClick={() => setIsLight(!isLight)} />
+          <input checked={isLight ? false : true} readOnly={true} ref={switchRef} type="checkbox" onChange={() => setIsLight(!isLight)} />
         </div>
         <FontAwesomeIcon className={style.icon__menu} icon={isOpen ? faMinus : faBars} color='black' size='2x' onClick={() => setIsOpen(!isOpen)} />
       </div>

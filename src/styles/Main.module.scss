@@ -131,7 +131,7 @@ article {
 
         &::before {
           content: "\f068";
-          color: #4b443c;
+          color: var(--main-project-ft-color);
           font-family: "Font Awesome 5 Free";
           font-weight: 900;
           margin-right: 10px;

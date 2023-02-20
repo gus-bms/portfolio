@@ -5,13 +5,19 @@ html[data-theme="light"] {
 
   //header + footer
   --header-footer-bg-color: #{$bg-white-01};
+  --header-hv-color: #{$fc-gray-02};
   --header-ft-color: #{$fc-khaki-01};
   --header-pg-bar-color: #{$bg-purple-01};
+  --footer-logo-color: #{$bg-khaki-06};
 
+  //slide menu
+  --slide-menu-bg-color: #{$bg-white-01};
+  --slide-menu-hv-color: #{$bg-apricot-09};
   // main - profile
   --main-img-ft-color: #{$fc-white-01};
   --main-article-hd-ft-color: #{$fc-khaki-02};
   --main-article-hd-bd-color: #{$fc-apricot-01};
+  --main-mode-bg-color: #{$bg-apricot-04};
 
   // main - projects
   --main-project-bg-color: #{$fc-apricot-02};
@@ -51,12 +57,19 @@ html[data-theme="dark"] {
   //header + footer
   --header-footer-bg-color: #{$bg-black-01};
   --header-ft-color: #{$fc-khaki-01};
+  --header-hv-color: #{$fc-white-01};
   --header-pg-bar-color: #{$bg-purple-01};
+  --main-mode-bg-color: #{$bg-purple-02};
+  --footer-logo-color: #{$fc-white-01};
+
+  //slide menu
+  --slide-menu-bg-color: #{$bg-khaki-07};
+  --slide-menu-hv-color: #{$bg-white-02};
 
   // main - profile
   --main-img-ft-color: #{$fc-white-01};
   --main-article-hd-ft-color: #{$fc-white-01};
-  --main-article-hd-bd-color: #{$fc-apricot-01};
+  --main-article-hd-bd-color: #{$fc-purple-02};
 
   // main - projects
   --main-project-bg-color: #{$bg-gray-07};
@@ -79,12 +92,16 @@ html[data-theme="dark"] {
   --timeline-ic-color: #{$fc-white-02};
 
   // button
-  --btn-bg-color-01: #{$bg-apricot-09};
-  --btn-fc-color-01: #{$fc-red-01};
-  --btn-bg-color-02: #{$bg-khaki-05};
-  --btn-fc-color-02: #{$fc-gray-01};
-  --btn-bg-color-03: #{$bg-black-02};
-  --btn-fc-color-03: #{$fc-white-01};
-  --btn-bg-color-04: #{$bg-apricot-10};
-  --btn-fc-color-04: #{$fc-purple-01};
+  // personal
+  --btn-bg-color-01: #{$bg-purple-03};
+  --btn-fc-color-01: #{$fc-gray-02};
+  // company
+  --btn-bg-color-02: #{$bg-khaki-06};
+  --btn-fc-color-02: #{$fc-white-01};
+  // link
+  --btn-bg-color-03: #{$bg-white-01};
+  --btn-fc-color-03: #{$fc-khaki-03};
+  // skill
+  --btn-bg-color-04: #{$bg-gray07};
+  --btn-fc-color-04: #{$fc-gray-02};
 }

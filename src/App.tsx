@@ -5,9 +5,7 @@ import Footer from './component/Footer';
 import './App.scss';
 
 function App() {
-  useEffect(() => {
-    document.documentElement.setAttribute("data-theme", "light");
-  }, []);
+  document.documentElement.setAttribute("data-theme", "light");
   return (
     <div className="App">
       <Header />

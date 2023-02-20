@@ -105,7 +105,7 @@ export default function Main() {
             <div className={style.box__intro}>
               <div className={style.intro}>
                 <p>제가 어떤 개발자인가에 대하여 어필하기 위하여 개발한 포트폴리오 사이트입니다. </p>
-                <p>애니메이션과 css를 활용하여 재밌는 페이지를 만들고자 했습니다.</p>
+                <p>scss를 활용하여 다크모드를 개발하였습니다.</p>
                 <p>앞으로도 추가적으로 개발된 프로젝트를 업데이트 할 예정입니다.</p>
               </div>
               <div className={style.skill}>
