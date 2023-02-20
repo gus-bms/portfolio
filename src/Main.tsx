@@ -21,6 +21,7 @@ export default function Main() {
       // eslint-disable-next-line @typescript-eslint/no-unused-expressions
       isDaymode
         ? (
+          document.documentElement.setAttribute("data-theme", "light"),
           dayRef.current.style.opacity = '1',
           dayRef.current.style.visibility = 'visible',
           dayRef.current.style.marginLeft = '0',
@@ -30,6 +31,7 @@ export default function Main() {
           nightRef.current.style.marginLeft = '-150px',
           nightRef.current.style.transform = 'translate(0, 0)'
         ) : (
+          document.documentElement.setAttribute("data-theme", "dark"),
           nightRef.current.style.opacity = '1',
           nightRef.current.style.visibility = 'visible',
           nightRef.current.style.marginLeft = '0',

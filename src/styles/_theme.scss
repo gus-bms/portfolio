@@ -1,0 +1,27 @@
+@import "./var";
+html[data-theme="light"] {
+  //header + footer
+  --header-footer-bg-color: #{$bg-white-01};
+  --header-ft-color: #{$fc-khaki-01};
+  --header-pg-bar-color: #{$bg-purple-01};
+
+  // main - profile
+  --main-img-ft-color: #{$fc-white-01};
+  --main-article-hd-ft-color: #{$fc-khaki-02};
+  --main-article-hd-bd-color: #{$fc-apricot-01};
+
+  // main - projects
+  --main-project-bg-color: #{$fc-apricot-02};
+  --main-project-hd-ft-color: #{$fc-khaki-02};
+  --main-project-ft-color: #{$fc-khaki-03};
+  --main-project-ic-color: #{$fc-khaki-04};
+
+  // main - button
+  --main-button-ic-color: #{$fc-white-01};
+}
+
+html[data-theme="dark"] {
+  --header-footer-bg-color: #{$bg-black-01};
+  --header-ft-color: #{$fc-khaki-01};
+  --header-pg-bar-color: #{$bg-purple-01};
+}

@@ -1,10 +1,12 @@
 @import "./mixin";
+@import "./theme";
+
 .box__footer {
   height: 20vh;
   align-items: center;
   justify-content: center;
   display: grid;
-  background-color: #fffdf9;
+  background-color: var(--header-footer-bg-color);
 }
 
 .box__brand {
@@ -23,7 +25,7 @@
 .copyright {
   margin-bottom: 40px !important;
   font-size: calc(12px + 0.5vw);
-  color: #b3b19f;
+  color: var(--header-ft-color);
   margin: 0;
 }
 

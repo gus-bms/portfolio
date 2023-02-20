@@ -1,17 +1,18 @@
 @import "./mixin";
+@import "./theme";
 
 .box__header {
   display: flex;
   align-items: center;
   justify-content: flex-start;
   position: fixed;
-  background-color: #fffdf9;
+  background-color: var(--header-footer-bg-color);
   top: 0;
   left: 0;
   right: 0;
   height: 10vh;
   z-index: 2;
-  color: #b3b19f;
+  color: var(--header-ft-color);
   box-shadow: 0 1px 0.3rem rgba(195, 200, 196, 0.8);
 }
 
@@ -21,7 +22,6 @@
   transition: 0.3s linear;
   font-size: 30px;
   z-index: 1;
-
   &:hover {
     color: black;
   }
@@ -35,7 +35,7 @@
     > h2 {
       margin-right: 20px;
       font-size: 25px;
-      color: #b3b19f;
+      color: var(--header-ft-color);
       cursor: pointer;
     }
   }
@@ -56,7 +56,7 @@
 .progress__bar {
   width: 0;
   height: 3px;
-  background-color: blueviolet;
+  background-color: --header-pg-bar-color;
 }
 
 @include mobile {

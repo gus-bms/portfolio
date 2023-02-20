@@ -5,6 +5,7 @@ import style from '../styles/Menu.module.scss'
 
 export default function SliderMenu() {
   const [isOpen, setIsOpen] = useState<boolean>(false)
+  const [isLight, setIsLight] = useState<boolean>(true)
   const switchRef = useRef<HTMLInputElement | null>(null)
 
   const moveAnchor = (target: string) => {
@@ -24,6 +25,11 @@ export default function SliderMenu() {
 
   }, [isOpen])
 
+  useEffect(() => {
+    console.log(isLight)
+    isLight ? document.documentElement.setAttribute("data-theme", "light") : document.documentElement.setAttribute("data-theme", "dark");
+  }, [isLight])
+
   return (
     <div className={[style.container, isOpen ? style.open : style.close].join(' ')}>
       <div className={style.logo}>
@@ -31,8 +37,7 @@ export default function SliderMenu() {
       </div>
       <div className={style.menubutton} >
         <div ref={switchRef} className={style.check__box}>
-          <input type="checkbox" />
-
+          <input type="checkbox" onClick={() => setIsLight(!isLight)} />
         </div>
         <FontAwesomeIcon className={style.icon__menu} icon={isOpen ? faMinus : faBars} color='black' size='2x' onClick={() => setIsOpen(!isOpen)} />
       </div>

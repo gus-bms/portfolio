@@ -1,4 +1,6 @@
 @import "./mixin";
+@import "./theme";
+
 .main {
   margin-top: 7vh;
 }
@@ -24,7 +26,7 @@
   left: 37%;
   top: 50%;
   transform: translate(-50%, -50%);
-  color: white;
+  color: var(--main-img-ft-color);
   text-align: left;
 }
 
@@ -36,7 +38,7 @@
   font-size: calc(10px + 0.5vw);
   bottom: 3%;
   right: 15px;
-  color: white;
+  color: var(--main-img-ft-color);
   text-align: left;
 
   h2 {
@@ -59,14 +61,15 @@ article {
   margin-bottom: 10vh;
 
   h1 {
+    color: var(--main-article-hd-ft-color);
     font-size: calc(30px + 1vw);
     margin: 3vh 0 3vh 0;
-    border-bottom: rgb(216, 147, 112) solid;
+    border-bottom: var(--main-article-hd-bd-color) solid;
     line-height: 11vh;
     min-height: 90px;
     &::before {
       content: "\f0c1";
-      color: rgb(216, 147, 112);
+      color: var(--main-article-hd-bd-color);
       font-family: "Font Awesome 5 Free";
       font-weight: 900;
       margin-right: 20px;
@@ -87,7 +90,7 @@ article {
 .box__project {
   > div {
     border-radius: 15px;
-    background-color: #ffcc82;
+    background-color: var(--main-project-bg-color);
     padding: 30px 0 10px 30px;
     margin-bottom: 30px;
   }
@@ -97,6 +100,7 @@ article {
 
     h2 {
       font-size: 27px;
+      color: var(--main-project-hd-ft-color);
     }
   }
   .box__title {
@@ -123,7 +127,7 @@ article {
         text-indent: -1.5em;
         font-size: 16px;
         line-height: 32px;
-        color: #4677a6;
+        color: var(--main-project-ft-color);
 
         &::before {
           content: "\f068";
@@ -136,21 +140,16 @@ article {
     }
 
     .skill {
-      color: #4677a6;
+      color: var(--main-project-ft-color);
       padding: 10px 20px 10px 20px;
       display: block;
       width: 100%;
       p {
         font-size: 15px;
         line-height: 39px;
-        > button {
-          &:first-child {
-            // margin-left: 100px;
-          }
-        }
         &::before {
           content: "\f121";
-          color: #4b443c;
+          color: var(--main-project-ic-color);
           font-family: "Font Awesome 5 Free";
           font-weight: 700;
           margin-right: 10px;
@@ -181,13 +180,18 @@ article {
     font-size: 20px;
     width: 80px;
     border: none;
+    background: linear-gradient(
+      180deg,
+      var(--main-button-ic-color),
+      var(--main-project-bg-color)
+    );
   }
   .btn__brightMode {
     align-items: center;
     right: 120px;
     bottom: 50px;
-    color: white;
-    background: linear-gradient(180deg, #fffdf9, #ffbe60);
+    color: var(--main-button-ic-color);
+
     svg {
       transition: all 0.3s;
     }
@@ -207,9 +211,6 @@ article {
   .btn__top {
     right: 20px;
     bottom: 50px;
-    // visibility: hidden;
-    background: linear-gradient(180deg, #fffdf9, #ffbe60);
-    // opacity: 0;
     svg {
       margin-top: 10px;
     }
