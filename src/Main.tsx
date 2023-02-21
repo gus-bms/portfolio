@@ -15,6 +15,7 @@ export default function Main() {
   const findPhotoImgs = ['find_photo1', 'find_photo2', 'find_photo3', 'find_photo4', 'find_photo5', 'find_photo6', 'find_photo7']
   const portFolioImgs = ['portfolio_1', 'portfolio_2', 'portfolio_3']
   const gludocMobileImgs = ['gludoc_mobile_1', 'gludoc_mobile_2', 'gludoc_mobile_3', 'gludoc_mobile_4', 'gludoc_mobile_5', 'gludoc_mobile_6', 'gludoc_mobile_7']
+  const gludocWebImgs = ['gludoc_web_1', 'gludoc_web_2', 'gludoc_web_3', 'gludoc_web_4']
   const ilabImgs = ['ilab_2', 'ilab_3', 'ilab_4', 'ilab_5', 'ilab_6', 'ilab_7', 'ilab_8']
 
   useEffect(() => {
@@ -243,7 +244,7 @@ export default function Main() {
           </div>
           <div className={style.project__detail}>
             <div className={style.box__slider}>
-              <Slider images={findPhotoImgs} />
+              <Slider images={gludocWebImgs} />
             </div>
             <div className={style.box__intro}>
               <div className={style.intro}>
