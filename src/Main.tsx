@@ -98,7 +98,7 @@ export default function Main() {
             <h2 className={style.project__title}>Portfolio</h2>
             <h2 className={style.project__period}>23.02</h2>
             <TypeButton name='#개인' type='P' />
-            <TypeButton name='Link' type='L' url='https://github.com/gus-bms/find_photo/' />
+            <TypeButton name='Link' type='L' url='https://github.com/gus-bms/portfolio/' />
           </div>
           <div className={style.project__detail}>
             <div className={style.box__slider}>
