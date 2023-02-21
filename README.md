@@ -1,46 +1,29 @@
-# Getting Started with Create React App
+# find_photo
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Link: gus-bms.github.io/portfolio
 
-## Available Scripts
+안녕하세요, 웹 프론트엔드 엔지니어 박규범입니다.  
+유저가 '**찾는**', 자주 '**이용**'하는 서비스를 만들고 싶습니다.  
+그러기 위해서 가장 중요한 것은 물론 서비스의 퀄리티이지만, 첫 인상인 화면이라고 생각합니다.  
+이 이유는 곧 제가 프론트엔드 엔지니어를 선택하게된 이유이기도 합니다.
+앞으로 변화하는 개발이라는 분야에서 더욱 성장하는 엔지니어가 되겠습니다.
 
-In the project directory, you can run:
+개발을 시작한 이후로 저의 커리어를 기술한 웹사이트 입니다.
+2022년 8월 퇴사한 후, 비전공자로 시작한 개발자 커리어를 더욱 단단히 하기 위하여 노력하였습니다.  
+정보처리기사 자격증을 취득하며 기초부터 다시 공부하였고, 토이 프로젝트를 개발하며 React.js, typescript에 대한 이해도를 높였습니다.  
+더 재밌는 서비스를 위해 고도화 중이고, 새로운 아이디어가 생기는 데로 바로 착수할 예정입니다. 😀
 
-### `npm start`
+감사합니다 👐
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Hello, I'm Gus, a web front-end engineer.  
+I want to create a service that users '**find**' and often '**use**'.  
+The most important thing to do that is, of course, the quality of the service, but I think the first impression is the screen.  
+This reason is also the reason why I chose to become a front-end engineer.  
+I will become an engineer who grows more in the field of development that changes in the future.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+This website describes my career since I started developing it.  
+After leaving the company in August 2022, I tried to strengthen the developer career that started as a non-major.  
+I studied again from the basics while acquiring an information processing engineer's license, and improved my understanding of React.js and typescript while developing a toy project.  
+We are upgrading for a more fun service, and we will start as soon as we have new ideas. 😀
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+Thank you 👐
