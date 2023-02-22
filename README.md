@@ -1,4 +1,4 @@
-# find_photo
+# 박규범 포트폴리오
 
 ## Link: gus-bms.github.io/portfolio
 
